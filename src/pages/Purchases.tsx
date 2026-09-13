@@ -93,7 +93,7 @@ function PurchaseForm({ onClose }: { onClose: () => void }) {
           <div className="mb-1.5 text-[13px] font-semibold text-ink-700">{t('ord.items')}</div>
           <ul className="space-y-2">
             {lines.map((l, i) => (
-              <li key={i} className="grid grid-cols-[1fr_76px_110px_40px] gap-2">
+              <li key={i} className="grid grid-cols-[1fr_62px_92px_34px] sm:grid-cols-[1fr_76px_110px_40px] gap-2">
                 <Select value={l.productId} onChange={(e) => setLines((ls) => ls.map((x, j) => j === i ? { ...x, productId: e.target.value } : x))}>
                   <option value="">{t('ord.selectProduct')}</option>{products.map((p) => <option key={p.id} value={p.id}>{p.name} (⦿{p.stockQty} · {money(p.avgCost)})</option>)}
                 </Select>
